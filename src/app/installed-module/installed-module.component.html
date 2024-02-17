@@ -1,0 +1,43 @@
+<div class="flex flex-col gap-4 p-16">
+    <label>
+        Quill Module
+    </label>
+    <div>
+        <quill-editor [(ngModel)]="htmlText" placeholder="Enter Text" [modules]="quillConfig"
+            (onSelectionChanged)="onSelectionChanged($event)"
+            (onContentChanged)="onContentChanged($event)"></quill-editor>
+    </div>
+
+    <label>
+        Toastr
+    </label>
+    <div>
+        <button (click)="testToastr()" class="bg-blue-600 px-4 py-2 text-white">
+            Test Toastr
+        </button>
+    </div>
+
+    <label>
+        Sweat alert
+    </label>
+    <div>
+        <button (click)="testAlert()" class="bg-blue-600 px-4 py-2 text-white">
+            Test alert
+        </button>
+    </div>
+
+    <label>
+        Ng select
+    </label>
+    <div>
+        <ng-select [(ngModel)]="selectedCar">
+            <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+         </ng-select>
+    </div>
+
+    <label>Html to pdf</label>
+    <label>international phone input</label>
+    <label>card validator</label>
+    <label>Flowbite</label>
+    <label>Tailwind Elements</label>
+</div>
