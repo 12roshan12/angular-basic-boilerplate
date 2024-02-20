@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { InstalledModuleComponent } from './installed-module/installed-module.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [

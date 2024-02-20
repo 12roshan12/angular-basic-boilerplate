@@ -1,0 +1,316 @@
+    <div class=" bg-gray-200 h-[100vh] absolute left-0 bottom-0 top-0 z-10 p-2 shadow-xl transition-all ease-in-out duration-300" [ngClass]="showSide ? 'w-[300px] ' : 'w-0 p-0' " >
+
+        <div *ngIf="showSide" class="flex flex-col w-full">
+
+             <div class=" cursor-pointer flex justify-end " >
+                <svg (click)="showSide = false " class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6m0 12L6 6"/>
+                  </svg>
+            </div>
+          
+            <div class="flex items-center justify-center flex-row w-full">
+                <svg class="w-24 h-24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xml:space="preserve" version="1.1"
+                    style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+                    viewBox="0 -55 333 416.25" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd">
+                    <defs>
+                        <style type="text/css">
+                            .fil0 {
+                                fill: #1C64F2
+                            }
+                        </style>
+                    </defs>
+                    <g>
+                        <g>
+                            <polygon class="fil0" points="109,212 76,212 45,69 95,182 118,179 " />
+                            <polygon class="fil0"
+                                points="45,34 201,102 188,169 216,165 188,213 136,212 145,175 153,174 161,119 " />
+                            <path class="fil0"
+                                d="M258 217l-158 35 23 -86 -21 3 -15 -31 70 1 -4 21 -6 1 -15 61 126 -5zm-63 -77l106 3 -109 13 3 -16z" />
+                        </g>
+                    </g>
+                </svg>
+
+                <label class="font-bold text-lg text-[#1C64F2]">
+                    Company
+                </label>
+            </div> 
+
+           
+        </div>
+
+    </div>
+
+    <div
+        class="py-4 px-8 flex flex-row justify-between items-center !h-[15vh] bg-gray-100 sticky top-0 left-0 right-0 w-full">
+
+
+
+        <div class="flex flex-row items-center w-full md:w-auto">
+            <div class="block md:hidden cursor-pointer">
+                <svg  (click)="showSide = true " class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+            </div>
+            <div class="flex flex-row gap-2 items-center justify-center md:justify-start md:w-auto w-full">
+                <svg class="w-24 h-24 cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xml:space="preserve" version="1.1"
+                    style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+                    viewBox="0 -55 333 416.25" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd">
+                    <defs>
+                        <style type="text/css">
+                            .fil0 {
+                                fill: #1C64F2
+                            }
+                        </style>
+                    </defs>
+                    <g>
+                        <g>
+                            <polygon class="fil0" points="109,212 76,212 45,69 95,182 118,179 " />
+                            <polygon class="fil0"
+                                points="45,34 201,102 188,169 216,165 188,213 136,212 145,175 153,174 161,119 " />
+                            <path class="fil0"
+                                d="M258 217l-158 35 23 -86 -21 3 -15 -31 70 1 -4 21 -6 1 -15 61 126 -5zm-63 -77l106 3 -109 13 3 -16z" />
+                        </g>
+                    </g>
+                </svg>
+
+                <label class="font-bold text-2xl text-[#1C64F2] cursor-pointer">
+                    Company
+                </label>
+            </div>
+        </div>
+
+        <div class="hidden md:block">
+
+            Menu items
+
+        </div>
+
+        <div class=" flex-row gap-4 hidden sm:flex">
+
+            <button data-modal-target="default-modal-login" data-modal-toggle="default-modal-login"
+                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button" (click)="openLoginModal()">
+                Login
+            </button>
+
+            <button data-modal-target="default-modal-registration" data-modal-toggle="default-modal-registration"
+                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button" (click)="openRegisterModal()">
+                Registration
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+<!-- Main modal -->
+<div id="default-modal-login" tabindex="-1" aria-hidden="true" data-modal-backdrop="static"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Login
+                </h3>
+                <button type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="default-modal-login" (click)="closeLoginModal()">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4">
+                <form class="max-w-md mx-auto" [formGroup]="loginFrom">
+                    <div class="mb-5">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Email</label>
+                        <input type="text" id="base-input" formControlName="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="loginFrom.get('email')?.touched && loginFrom.get('email')?.invalid ? 'border-red-600' : '' ">
+
+                    </div>
+                    <div class="mb-5 relative">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Password</label>
+                        <input [type]=" loginPasswordVisiblity ? 'text' : 'password'" id="base-input"
+                            formControlName="password"
+                            class="bg-gray-50 border border- gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="loginFrom.get('password')?.touched && loginFrom.get('password')?.invalid ? 'border-red-600' : '' ">
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="!loginPasswordVisiblity">
+                            <svg (click)="loginPasswordVisiblity = true" class="w-6 h-6 text-gray-800 dark:text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-width="2"
+                                    d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6Z" />
+                                <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="loginPasswordVisiblity">
+                            <svg (click)="loginPasswordVisiblity = false" class="w-6 h-6 text-gray-800 dark:text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="m4 15.6 3-3V12a5 5 0 0 1 5-5h.5l1.8-1.7A9 9 0 0 0 12 5C6.6 5 2 10.3 2 12c.3 1.4 1 2.7 2 3.6Z" />
+                                <path
+                                    d="m14.7 10.7 5-5a1 1 0 1 0-1.4-1.4l-5 5A3 3 0 0 0 9 12.7l.2.6-5 5a1 1 0 1 0 1.4 1.4l5-5 .6.2a3 3 0 0 0 3.6-3.6 3 3 0 0 0-.2-.6Z" />
+                                <path
+                                    d="M19.8 8.6 17 11.5a5 5 0 0 1-5.6 5.5l-1.7 1.8 2.3.2c6.5 0 10-5.2 10-7 0-1.2-1.6-2.9-2.2-3.4Z" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="mb-5">
+                        Don't have an account ? <span class="text-blue-600 cursor-pointer"
+                            data-modal-hide="default-modal-login" data-modal-toggle="default-modal-registration"
+                            (click)="loginFrom.reset()" (click)="closeLoginModal()"
+                            (click)="openRegisterModal()">Register</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <button type="button" (click)="login()"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+                <button data-modal-hide="default-modal-login" type="button" (click)="closeLoginModal()"
+                    class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="default-modal-registration" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Register
+                </h3>
+                <button type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="default-modal-registration" (click)="closeRegisterModal()">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4">
+                <form class="max-w-md mx-auto" [formGroup]="registrationForm">
+
+                    <div class="mb-5">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Full
+                            name</label>
+                        <input type="text" id="base-input" formControlName="fullname"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="registrationForm.get('fullname')?.touched && registrationForm.get('fullname')?.invalid ? 'border-red-600' : '' ">
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Email</label>
+                        <input type="text" id="base-input" formControlName="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid ? 'border-red-600' : '' ">
+                    </div>
+
+                    <div class="mb-5 relative">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Password</label>
+                        <input [type]=" registrationPasswordVisiblity ? 'text' : 'password'" id="base-input"
+                            formControlName="password"
+                            class="bg-gray-50 border border- gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid ? 'border-red-600' : '' ">
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="!registrationPasswordVisiblity">
+                            <svg (click)="registrationPasswordVisiblity = true"
+                                class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-width="2"
+                                    d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6Z" />
+                                <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="registrationPasswordVisiblity">
+                            <svg (click)="registrationPasswordVisiblity = false"
+                                class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="m4 15.6 3-3V12a5 5 0 0 1 5-5h.5l1.8-1.7A9 9 0 0 0 12 5C6.6 5 2 10.3 2 12c.3 1.4 1 2.7 2 3.6Z" />
+                                <path
+                                    d="m14.7 10.7 5-5a1 1 0 1 0-1.4-1.4l-5 5A3 3 0 0 0 9 12.7l.2.6-5 5a1 1 0 1 0 1.4 1.4l5-5 .6.2a3 3 0 0 0 3.6-3.6 3 3 0 0 0-.2-.6Z" />
+                                <path
+                                    d="M19.8 8.6 17 11.5a5 5 0 0 1-5.6 5.5l-1.7 1.8 2.3.2c6.5 0 10-5.2 10-7 0-1.2-1.6-2.9-2.2-3.4Z" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="mb-5 relative">
+                        <label for="base-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white required">Confirm
+                            Password</label>
+                        <input [type]=" registrationPasswordVisiblityConfirm ? 'text' : 'password'" id="base-input"
+                            formControlName="confirmPassword"
+                            class="bg-gray-50 border border- gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            [ngClass]="registrationForm.get('confirmPassword')?.touched && registrationForm.get('confirmPassword')?.invalid ? 'border-red-600' : '' ">
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="!registrationPasswordVisiblityConfirm">
+                            <svg (click)="registrationPasswordVisiblityConfirm = true"
+                                class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-width="2"
+                                    d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6Z" />
+                                <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+
+                        <span class="absolute top-[51%] right-[5%]" *ngIf="registrationPasswordVisiblityConfirm">
+                            <svg (click)="registrationPasswordVisiblityConfirm = false"
+                                class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="m4 15.6 3-3V12a5 5 0 0 1 5-5h.5l1.8-1.7A9 9 0 0 0 12 5C6.6 5 2 10.3 2 12c.3 1.4 1 2.7 2 3.6Z" />
+                                <path
+                                    d="m14.7 10.7 5-5a1 1 0 1 0-1.4-1.4l-5 5A3 3 0 0 0 9 12.7l.2.6-5 5a1 1 0 1 0 1.4 1.4l5-5 .6.2a3 3 0 0 0 3.6-3.6 3 3 0 0 0-.2-.6Z" />
+                                <path
+                                    d="M19.8 8.6 17 11.5a5 5 0 0 1-5.6 5.5l-1.7 1.8 2.3.2c6.5 0 10-5.2 10-7 0-1.2-1.6-2.9-2.2-3.4Z" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="mb-5">
+                        Already have an account ? <span class="text-blue-600 cursor-pointer"
+                            data-modal-hide="default-modal-registration" data-modal-toggle="default-modal-login"
+                            (click)="registrationForm.reset()" (click)="closeRegisterModal()"
+                            (click)="openLoginModal()">Login</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <button type="button" (click)="register()"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
+                <button data-modal-hide="default-modal-registration" type="button" (click)="closeRegisterModal()"
+                    class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

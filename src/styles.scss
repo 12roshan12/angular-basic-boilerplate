@@ -32,3 +32,8 @@
     height: 4px;
     border-radius: 25px;
 }
+
+.required::after {
+    content: ' *';
+    color: red;
+}
